@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 21:45:02 by codespace         #+#    #+#             */
-/*   Updated: 2024/10/31 00:41:08 by codespace        ###   ########.fr       */
+/*   Updated: 2024/10/31 13:23:17 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,6 @@ class ClapTrap
         int getHitPoints() const;
         int getEnergyPoints() const;
         int getAttackDamage() const;
-        void    setHitPoints(int amount);
-        void    setEnergyPoints(int amount);
-        void    setAttackDamage(int amount);
 
         void    attack(const std::string& target);
         void    takeDamage(unsigned int amount);

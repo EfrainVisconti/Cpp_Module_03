@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 21:44:51 by codespace         #+#    #+#             */
-/*   Updated: 2024/10/31 01:05:51 by codespace        ###   ########.fr       */
+/*   Updated: 2024/10/31 13:22:51 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,21 +63,6 @@ int ClapTrap::getEnergyPoints() const
 int ClapTrap::getAttackDamage() const
 {
     return this->_attackDamage;
-}
-
-void    ClapTrap::setHitPoints(int amount)
-{
-    this->_hitPoints = amount;
-}
-
-void    ClapTrap::setEnergyPoints(int amount)
-{
-    this->_energyPoints = amount;
-}
-
-void    ClapTrap::setAttackDamage(int amount)
-{
-    this->_attackDamage = amount;
 }
 
 void    ClapTrap::attack(const std::string& target)
