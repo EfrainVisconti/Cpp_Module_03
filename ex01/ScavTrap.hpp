@@ -6,14 +6,14 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:25:55 by codespace         #+#    #+#             */
-/*   Updated: 2024/10/31 19:28:45 by codespace        ###   ########.fr       */
+/*   Updated: 2024/10/31 21:44:47 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCAVTRAP_HPP
 # define SCAVTRAP_HPP
 
-# include "ClapTrap.hpp"
+#include "ClapTrap.hpp"
 
 class ScavTrap : public ClapTrap
 {
