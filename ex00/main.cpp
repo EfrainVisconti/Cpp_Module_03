@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 21:44:13 by codespace         #+#    #+#             */
-/*   Updated: 2024/10/31 01:37:52 by codespace        ###   ########.fr       */
+/*   Updated: 2024/10/31 01:41:55 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,8 @@ int	main(void)
     claptrap1.beRepaired(test2);
     claptrap1.showInfo();
     claptrap2.showInfo();
-    std::cout << claptrap2.getName() << " got attacked by other ClapTrap..." << std::endl;
+    std::cout << claptrap2.getName() << " got attacked by other ClapTrap causing ";
+    std::cout << test1 << " points of damage!" << std::endl;
     claptrap2.takeDamage(test1);
     std::cout << std::endl << GREEN << "----- Destructor calls -----" << RESET << std::endl;
 
