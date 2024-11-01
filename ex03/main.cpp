@@ -6,12 +6,11 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 23:03:51 by codespace         #+#    #+#             */
-/*   Updated: 2024/10/31 23:03:56 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/01 23:36:26 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 const std::string RESET = "\033[0m";
 const std::string GREEN = "\033[32m";
@@ -19,28 +18,52 @@ const std::string GREEN = "\033[32m";
 int	main(void)
 {
     std::cout << std::endl << GREEN << "----- Constructor calls -----" << RESET << std::endl;
-    ClapTrap claptrap("Evaluator");
-    ScavTrap scavtrap("Student");
-    FragTrap fragtrap;
-    FragTrap fragtrap1("RandomGuy");
-    FragTrap fragtrap2(fragtrap1);
-    fragtrap = fragtrap1;
+    DiamondTrap a1("A");
+    DiamondTrap b1("B");
+    DiamondTrap c;
+    DiamondTrap a2;
+    DiamondTrap b2(b1);
+    a2 = a1;
+    FragTrap f("fragtrap");
+    ScavTrap s("scavtrap");
     
-    std::cout << std::endl << GREEN << "----- ClapTrap, ScavTrap and FragTrap testing -----" << RESET << std::endl;
-    claptrap.showInfo();
-    scavtrap.showInfo();
-    fragtrap.showInfo();
-    claptrap.attack(fragtrap2.getName());
-    scavtrap.attack(claptrap.getName());
-    fragtrap.attack(scavtrap.getName());
-    claptrap.takeDamage(scavtrap.getAttackDamage());
-    scavtrap.takeDamage(claptrap.getAttackDamage());
-    fragtrap.takeDamage(fragtrap2.getAttackDamage());
-    scavtrap.guardGate();
-    fragtrap.highFivesGuys();
-    claptrap.showInfo();
-    scavtrap.showInfo();
-    fragtrap.showInfo();
+    std::cout << std::endl << GREEN << "----- Showing general object's information -----" << RESET << std::endl;
+    f.showInfo();
+    s.showInfo();
+    a1.showInfo();
+    b1.showInfo();
+    c.showInfo();
+    a2.showInfo();
+    b2.showInfo();
+
+    std::cout << std::endl << GREEN << "----- Base class member functions -----" << RESET << std::endl;
+    a1.attack("A_Enemy");
+    b1.attack("B_Enemy");
+    c.attack("Unnamed_Enemy");
+    a2.attack("A_Enemy");
+    b2.attack("B_Enemy");
+    a1.beRepaired(1);
+    b1.beRepaired(1);
+    c.beRepaired(1);
+    a2.beRepaired(1);
+    b2.beRepaired(1);
+    a2.takeDamage(100);
+    b2.takeDamage(100);
+    
+    std::cout << std::endl << GREEN << "----- Derived classes member functions -----" << RESET << std::endl;
+    a2.guardGate();
+    a2.highFivesGuys();
+    a2.whoAmI();
+    b2.guardGate();
+    b2.highFivesGuys();
+    b2.whoAmI();
+
+    std::cout << std::endl << GREEN << "----- Showing general object's information -----" << RESET << std::endl;
+    a1.showInfo();
+    b1.showInfo();
+    c.showInfo();
+    a2.showInfo();
+    b2.showInfo();
     std::cout << std::endl << GREEN << "----- Destructor calls -----" << RESET << std::endl;
 
     return 0;	

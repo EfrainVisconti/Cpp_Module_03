@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 23:08:02 by codespace         #+#    #+#             */
-/*   Updated: 2024/10/31 23:13:25 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/01 20:47:28 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 
-class DiamondTrap : 
+class DiamondTrap : public ScavTrap, public FragTrap
 {
     private:
-        std::string _name;
+        std::string  _name;
 
     public:
         DiamondTrap();
@@ -28,6 +28,8 @@ class DiamondTrap :
         DiamondTrap    &operator=(const DiamondTrap &other); //Copy assignment operator
         ~DiamondTrap();
 
+        void    attack(const std::string &target);
+        void    whoAmI();
 };
 
 #endif

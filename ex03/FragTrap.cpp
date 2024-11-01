@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 23:04:20 by codespace         #+#    #+#             */
-/*   Updated: 2024/10/31 23:04:24 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/01 23:17:56 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 FragTrap::FragTrap() : ClapTrap()
 {
     this->setHitPoints(100);
-    this->setEnergyPoints(100);
+    if (this->_energyPoints != 50)
+        this->setEnergyPoints(100);
     this->setAttackDamage(30);
     std::cout << "FragTrap " << this->getName() << " created" << std::endl;
 }
@@ -23,7 +24,8 @@ FragTrap::FragTrap() : ClapTrap()
 FragTrap::FragTrap(std::string const name) : ClapTrap(name)
 {
     this->setHitPoints(100);
-    this->setEnergyPoints(100);
+    if (this->_energyPoints != 50)
+        this->setEnergyPoints(100);
     this->setAttackDamage(30);
     std::cout << "FragTrap " << this->getName() << " created" << std::endl;
 }
